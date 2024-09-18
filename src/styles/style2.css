@@ -1,0 +1,48 @@
+#container{
+    padding: 25px;
+    background: #090a0b;
+}
+
+button{
+    background: #090a0b;
+    border: 0px;
+}
+
+button#enviar{
+    color: white;
+    background: #e63946;
+    border: 0px;
+    border-radius: 15px;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+button#enviar:hover{
+    background: #090a0b;
+    box-shadow: 0px 0px 15px #e63946;
+    color: #e63946;
+}
+
+entry#enviar_input{
+    background-color: #242423;
+    border: 0px;
+    color: white;
+    margin-left: 100px;
+}
+
+
+
+button#btimage{
+    background-image: url("https://i.pinimg.com/564x/fc/c5/8b/fcc58b16d0e12f8a7ac131e3b44dc405.jpg");
+    background-size: cover;
+    background-position: center;
+    border: 0px;
+    border-radius: 25px;
+}
+
+button#music_name{
+    font-size: 15px;
+    color: #e63946;
+    border: 0px;
+}
+

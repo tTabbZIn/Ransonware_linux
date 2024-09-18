@@ -1,0 +1,31 @@
+#container{
+    padding: 25px;
+    background: #0a0908;
+    padding: 15px;
+    text-align: center;
+}
+
+button#msg{
+    color: white;
+    background: #0a0908;
+    border: 0;
+    font-size: 20px;
+}
+
+button#load{
+    margin-left: 405px;
+    background: transparent;
+    border: 2px solid transparent;
+    border-top-color: #51d4db;
+    border-radius: 100%;
+    animation: is-rotating 1s infinite;
+
+
+
+}
+
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
